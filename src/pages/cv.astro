@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Sobre | Objetivo</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Sou um Desenvolvedor Full-Stack e Técnico em eletrônica com muita experiência em T.I. Meu objetivo é me especializar ainda mais na área de Desenvolvimento de Software, buscando uma vaga que me permita trabalhar exclusivamente com desenvolvimento. Possuo conhecimentos sólidos em linguagens como Golang, C++, MySQL, Shell Bash, Node.js e PHP. Estou entusiasmado para aplicar minha experiência em projetos desafiadores e contribuir para soluções eficientes e inovadoras. Além disso, estou ansioso para explorar novas oportunidades onde poderei crescer ainda mais como profissional e contribuir significativamente para a sua empresa.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Formação</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Técnico em eletrônica"
+      subtitle="CTA Eletrônica"
+    />
+    <TimeLineElement
+      title="Análise e Desenvolvimento de Sistema"
+      subtitle="Universidade de Marília | Cursando"
+    />
+    <TimeLineElement
+      title="C  C++  Shell-Bash  Javascript  PHP"
+      subtitle="Udemy"
+    />
+    <TimeLineElement
+      title="GoLang  Node  Express  React  Next  Python"
+      subtitle="Udemy"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Portfólio | Projetos</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="https://www.linkedin.com/in/erasmo-cardoso-da-silva-76105423a/" target="_blank">Linkedin</a>
+    </li>
+    <li>
+      <a href="https://github.com/erascardsilva" target="_blank">GitHub</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Habilidades</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Debian </li>  <li>Red-Hat </li>  <li>Arch Linux</li> 
+    <li>Golang</li>   <li>Node.js </li> <li>PHP</li> <li>Laravel</li>
+    <li>JavaScript</li> <li>HTML e CSS</li>  <li>SQL</li> <li> Docker </li>
+    <li>DynamonDB</li> <li>Shell Bash</li> <li>C++</li> <li>Windows</li>
+  </ul>
+  
+
+  <div class="mb-5">
+    <br>
+    <div class="text-3xl w-full font-bold">Algumas Experiência </div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Técnico em Eletrônica"
+      subtitle="Insiste Telecomunicações"
+      duration="1993 - 2001"
+    />
+    <TimeLineElement
+      title="Técnico em Eletrônica"
+      subtitle="BRA-RIO (RBS)"
+      duration="2003 - 2007"
+    />
+    <TimeLineElement
+      title="Desenvolvedor Full-Stack | Técnico em Eletrônica"
+      subtitle="VMI Informática"
+      duration="2007 - Atual"
+    />
+  </div>
+</BaseLayout>

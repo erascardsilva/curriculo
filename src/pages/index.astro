@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug"
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Seja Bem Vindo ao meu protifólio 👋</div>
+    <div class="text-5xl font-bold">Sou o Erasmo Cardoso</div>
+    <div class="text-2xl py-3 ">Analista e Desenvolvedor de Sistemas</div>
+    <div class="py-2">
+      <text class="text-lg">
+        Profissional de TI experiente, concentro-me na resolução de desafios complexos, 
+        com ênfase especial no desenvolvimento de algoritmos e soluções eficazes. 
+        Minha experiência abrange tanto o ambiente corporativo quanto projetos independentes, 
+        refletindo minha paixão pela eletrônica e programação. Estou pronto para aplicar minha expertise para impulsionar
+        o sucesso da equipe e enfrentar novos desafios com entusiasmo e dedicação.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn" href="https://www.linkedin.com/in/erasmo-cardoso-da-silva-76105423a/" target="_blank">Linkedin</a>
+      <a href="https://github.com/erascardsilva" target="_blank" class="btn btn-outline ml-5">
+        GitHub
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Alguns Projetos {"</>"}</div>
+  </div>
+
+  <HorizontalCard
+    title="Site VMI Informática"
+    img="/siteVMI.png"
+    desc="Site em HTML CSS e Javascript já o aplicativo de Ordem de Serviço de equipamentos da empresa app em PHP com banco de dados Mysql , o cliente acessa o app pelo site."
+    
+    url="https://www.vmi-informatica.com.br/#"
+    
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Pagina de Login Cadastro e recuperação "
+    img="/marcenaria.png"
+    desc="Neste serviço tranbalhei durante alguns meses e contribui com pagina de login cadastro e recuperação de senha, o projeto é em PHP Laravel com banco de dados Mysql."
+    url="#https://www.marcenaria.digital/"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="App Contract"
+    img="/contract.png"
+    desc="App em Golang(BACK END) e React (Front) este projeto ainda se encontra em desenvolvimento e será hospedado na AWS e usa banco de dados DynamonDB."
+    url="#"
+    badge="NEW"
+  />
+
+  <!-- <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  } -->
+</BaseLayout>
