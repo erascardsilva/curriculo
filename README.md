@@ -28,6 +28,15 @@ Astrofy is a free and open-source template for your Personal Portfolio Website b
 - **dayjs:** A lightweight and immutable date library for parsing, validating, manipulating, and formatting dates.
 - **sharp:** High-performance image processing library.
 
+## Install
+- git clone https://github.com/your-username/astrofy.git
+- cd astrofy
+- npm install
+- npm run dev
+
+- http://localhost:3000.
+
+
 ## Version
 
 Current version: 3.0.0
