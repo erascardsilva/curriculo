@@ -1,6 +1,6 @@
 <h3>Portfólio utilizado Astro </h3>
 
-![image](https://github.com/erascardsilva/curriculo/assets/70297459/b007a462-3f31-41a4-84d5-6ebef6a21678)
+<img width = "1000px" src=https://github.com/erascardsilva/curriculo/assets/70297459/b007a462-3f31-41a4-84d5-6ebef6a21678>
 
 <h6>Astrofy</h6>
 # Portfólio Astro
