@@ -45,4 +45,6 @@ Current version: 3.0.0
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/af58b925-cc5a-4a20-ba3c-e3f7f81ca258/deploy-status)](https://app.netlify.com/sites/erasmocs/deploys)
+
 
