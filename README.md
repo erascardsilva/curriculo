@@ -34,7 +34,7 @@ Astrofy is a free and open-source template for your Personal Portfolio Website b
 - npm install
 - npm run dev
 
-- http://localhost:3000.
+- http://localhost:4321
 
 
 ## Version
