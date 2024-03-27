@@ -45,6 +45,9 @@ Current version: 3.0.0
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dec8aea0-d320-41fa-bbcd-b649e32e7d53/deploy-status)](https://app.netlify.com/sites/astounding-kitsune-930476/deploys)
+
 
 
 
