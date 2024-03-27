@@ -4,9 +4,21 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// Obtém a coleção de postagens do blog e ordena por data de publicação, se disponível
+const posts = (await getCollection("blog")).sort((a, b) => {
+  if (a.data.pubDate && b.data.pubDate) {
+    return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+  } else if (!a.data.pubDate && b.data.pubDate) {
+    return 1;
+  } else if (a.data.pubDate && !b.data.pubDate) {
+    return -1;
+  } else {
+    return 0;
+  }
+});
 
 const last_posts = posts.slice(0, 3);
+
 ---
 
 <BaseLayout sideBarActiveItemID="home">
