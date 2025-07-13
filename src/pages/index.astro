@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
+import createSlug from "../lib/createSlug";
 
 // Obtém a coleção de postagens do blog e ordena por data de publicação, se disponível
 const posts = (await getCollection("blog")).sort((a, b) => {
@@ -18,25 +18,34 @@ const posts = (await getCollection("blog")).sort((a, b) => {
 });
 
 const last_posts = posts.slice(0, 3);
-
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-5xl font-bold">Erasmo Cardoso da Silva</div>
-    <div class="text-2xl py-3 ">Analista e Desenvolvedor de Sistemas</div>
+    <div class="text-2xl py-3">Analista e Desenvolvedor de Sistemas</div>
     <div class="py-2">
-      <text class="text-lg">
-        Profissional de TI, concentro-me na resolução de desafios complexos, 
-        com ênfase especial no desenvolvimento de algoritmos e soluções eficazes. 
-        Minha experiência abrange tanto o ambiente corporativo quanto projetos independentes, 
-        refletindo minha paixão pela eletrônica e programação. Estou pronto para aplicar minha expertise para impulsionar
-        o sucesso da equipe e enfrentar novos desafios com entusiasmo e dedicação.
-      </text>
+      <p class="text-lg">
+        Profissional de TI focado em resolver desafios complexos, com ênfase no
+        desenvolvimento de algoritmos e soluções eficientes. Experiência em
+        ambiente corporativo e projetos independentes, com paixão por eletrônica
+        e programação. Pronto para aplicar expertise, impulsionar equipes e
+        encarar novos desafios com dedicação.
+      </p>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://www.linkedin.com/in/erasmo-cardoso-da-silva-76105423a/" target="_blank">Linkedin</a>
-      <a href="https://github.com/erascardsilva" target="_blank" class="btn btn-outline ml-5">
+      <a
+        class="btn"
+        href="https://www.linkedin.com/in/erasmo-cardoso-da-silva-76105423a/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Linkedin</a>
+      <a
+        href="https://github.com/erascardsilva"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-outline ml-5"
+      >
         GitHub
       </a>
     </div>
@@ -49,12 +58,30 @@ const last_posts = posts.slice(0, 3);
   <div class="divider my-0"></div>
 
   <HorizontalCard
+    title="Sistema de Gerenciamento de Assistência Técnica"
+    img="/appelectrocode.png"
+    desc="SaaS com front-end em React, backend em Node.js e banco de dados MySQL, orquestrado via Docker Compose. Gerencia clientes, equipamentos, serviços, produtos e financeiro, com autenticação JWT e controle de acesso."
+    url="https://electrocode.com.br/app/#"
+  />
+
+  <div class="divider my-0"></div>
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Site da empresa ElectroCode"
+    img="/electrocode.png"
+    desc="Site institucional desenvolvido em HTML, CSS e JavaScript, hospedado via SaaS da empresa em VPS."
+    url="https://electrocode.com.br/app/#"
+  />
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
     title="Site VMI Informática"
     img="/siteVMI.png"
-    desc="Site em HTML CSS e Javascript já o aplicativo de Ordem de Serviço de equipamentos da empresa app em PHP com banco de dados Mysql, o cliente acessa o app pelo site."
-    
+    desc="Site em HTML, CSS e JavaScript. Aplicativo de ordem de serviço em PHP com banco de dados MySQL, acessado via site pela empresa."
     url="https://www.vmi-informatica.com.br/#"
-    
   />
 
   <div class="divider my-0"></div>
@@ -62,28 +89,28 @@ const last_posts = posts.slice(0, 3);
   <HorizontalCard
     title="App ConXtract"
     img="/contract.png"
-    desc="ConXtract em desenvolvimento: Um aplicativo para contratos imobiliários, utilizando as tecnologias Golang, React e DynamoDB, hospedado na AWS. Em breve link"
+    desc="Aplicativo em desenvolvimento para contratos imobiliários, usando Golang, React e DynamoDB, hospedado na AWS. Link em breve."
     url="#"
     badge="NEW"
   />
 
   <div class="divider my-0"></div>
+
   <HorizontalCard
-    title="Pagina de Login, Cadastro e recuperação "
+    title="Página de Login, Cadastro e Recuperação"
     img="/marcenaria.png"
-    desc="Neste serviço trabalhei durante alguns meses e contribui com pagina de login cadastro e recuperação de senha, o projeto é em PHP Laravel com banco de dados Mysql."
+    desc="Desenvolvimento de páginas de login, cadastro e recuperação de senha em projeto PHP Laravel com banco de dados MySQL."
     url="https://marcenariadigital.com/login"
   />
 
   <div class="divider my-0"></div>
-  
+
   <HorizontalCard
     title="Cadastro Igreja"
     img="/proIgreja.png"
-    desc="O aplicativo foi desenvolvido utilizando as tecnologias Node.js, Express e SQLite3. Ele é utilizado em um computador local da igreja e está hospedado em um servidor próprio, utilizando Docker. Opera sem depender de conexão com a internet." 
+    desc="Aplicativo desenvolvido em Node.js, Express e SQLite3, utilizado localmente na igreja, hospedado em servidor próprio via Docker, funcionando offline."
     url="https://github.com/erascardsilva/church-app-project"
-    
   />
- 
+
   <div class="divider my-0"></div>
 </BaseLayout>
