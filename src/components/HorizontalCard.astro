@@ -1,5 +1,5 @@
 ---
-const { title, img, desc, url, badge, tags, snapUrl, target = "_blank" } = Astro.props;
+const { title, img, desc, url, badge, tags, snapUrl, marketingUrl, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "";
 ---
@@ -25,9 +25,14 @@ const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "";
       </h1>
       <p class="py-1 text-1xl text-justify">{desc}</p>
       <div class="card-actions justify-end mt-2 items-center">
+        {marketingUrl && (
+          <a href={marketingUrl} target="_blank" class="btn btn-outline btn-sm btn-secondary">
+            Página do Produto
+          </a>
+        )}
         {snapUrl && (
           <a href={snapUrl} target="_blank" class="btn btn-outline btn-sm btn-primary">
-            Get it from Snap Store
+            Baixar na Snap Store
           </a>
         )}
         <a href={url} target={target} class="btn btn-outline btn-sm">
