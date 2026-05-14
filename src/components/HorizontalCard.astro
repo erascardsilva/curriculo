@@ -35,9 +35,11 @@ const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "";
             Baixar na Snap Store
           </a>
         )}
-        <a href={url} target={target} class="btn btn-outline btn-sm">
-          GitHub
-        </a>
+        {url && url !== "#" && (
+          <a href={url} target={target} class="btn btn-outline btn-sm">
+            {url.includes("github.com") ? "GitHub" : "Acessar Aplicação"}
+          </a>
+        )}
         {tags &&
           tags.map((tag) => (
             <div class="badge badge-outline">{tag}</div>
