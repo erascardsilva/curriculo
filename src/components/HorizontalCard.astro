@@ -1,5 +1,5 @@
 ---
-const { title, img, desc, url, badge, tags, snapUrl, marketingUrl, target = "_blank" } = Astro.props;
+const { title, img, desc, url, badge, tags, snapUrl, marketingUrl, msStoreUrl, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "";
 ---
@@ -33,6 +33,11 @@ const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "";
         {snapUrl && (
           <a href={snapUrl} target="_blank" class="btn btn-outline btn-sm btn-primary">
             Baixar na Snap Store
+          </a>
+        )}
+        {msStoreUrl && (
+          <a href={msStoreUrl} target="_blank" class="btn btn-outline btn-sm btn-info">
+            Microsoft Store
           </a>
         )}
         {url && url !== "#" && (
