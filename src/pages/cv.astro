@@ -27,29 +27,60 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       title="Pós-graduação Lato Sensu - Engenharia de Software"
       subtitle="Faculdade Metropolitana"
     >
-      <a
-        href="https://www.estudesemfronteiras.com/visualizar-certificado/cc02b6d2e6d816fd1726992ab402f22c"
-        target="_blank"
-        class="link link-primary font-bold"
-      >
-        Certificado
-      </a>
-      <div class="text-sm font-light opacity-75 mt-1">
-        Código de Autenticação: cc02b6d2e6d816fd1726992ab402f22c
+      <div class="flex items-center gap-4 mt-2">
+        <button class="btn btn-sm btn-outline btn-primary" onclick="metropolitana_modal.showModal()">Visualizar</button>
+        <a
+          href="https://www.estudesemfronteiras.com/visualizar-certificado/cc02b6d2e6d816fd1726992ab402f22c"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link link-primary text-sm font-semibold"
+        >
+          Autenticar
+        </a>
       </div>
+
+      <dialog id="metropolitana_modal" class="modal">
+        <div class="modal-box w-11/12 max-w-5xl h-[85vh] flex flex-col">
+          <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          </form>
+          <h3 class="font-bold text-lg mb-4">Certificado - Engenharia de Software</h3>
+          <iframe src="/diplomas/metropolitanaEngenharia.pdf" class="w-full flex-grow rounded-lg border border-base-300"></iframe>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </TimeLineElement>
 
     <TimeLineElement
       title="Superior em Análise e Desenvolvimento de Sistema"
       subtitle="Universidade de Marília"
     >
-      <a
-        href="https://diplomas.unimar.br/digital/420.420.93c9e1d63135f0a5d757ac8b3e7bc055114ca8e1ad"
-        target="_blank"
-        class="link link-primary font-bold"
-      >
-        Certificado
-      </a>
+      <div class="flex items-center gap-4 mt-2">
+        <button class="btn btn-sm btn-outline btn-primary" onclick="unimar_modal.showModal()">Visualizar</button>
+        <a
+          href="https://diplomas.unimar.br/digital/420.420.93c9e1d63135f0a5d757ac8b3e7bc055114ca8e1ad"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link link-primary text-sm font-semibold"
+        >
+          Autenticar
+        </a>
+      </div>
+
+      <dialog id="unimar_modal" class="modal">
+        <div class="modal-box w-11/12 max-w-5xl h-[85vh] flex flex-col">
+          <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          </form>
+          <h3 class="font-bold text-lg mb-4">Certificado - Análise e Desenvolvimento de Sistema</h3>
+          <iframe src="/diplomas/unimarAds.pdf" class="w-full flex-grow rounded-lg border border-base-300"></iframe>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </TimeLineElement>
 
     <TimeLineElement
