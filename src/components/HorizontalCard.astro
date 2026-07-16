@@ -1,5 +1,5 @@
 ---
-const { title, img, desc, url, badge, tags, snapUrl, marketingUrl, msStoreUrl, target = "_blank" } = Astro.props;
+const { title, img, desc, url, badge, tags, snapUrl, marketingUrl, msStoreUrl, playStoreUrl, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "";
 ---
@@ -38,6 +38,11 @@ const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "";
         {msStoreUrl && (
           <a href={msStoreUrl} target="_blank" class="btn btn-outline btn-sm btn-info">
             Microsoft Store
+          </a>
+        )}
+        {playStoreUrl && (
+          <a href={playStoreUrl} target="_blank" class="btn btn-outline btn-sm btn-success">
+            Google Play Store
           </a>
         )}
         {url && url !== "#" && (
